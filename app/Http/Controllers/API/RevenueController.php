@@ -3,9 +3,19 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Models\Revenue;
 
 class RevenueController extends Controller
 {
-    //
+
+    public function index()
+    {
+        $revenue = Revenue::all();
+
+        return response()->json([
+            'status' => 200,
+            'revenues' => $revenue,
+        ]);
+    }
+
 }
