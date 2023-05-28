@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('revenues', [RevenueController::class, 'index']);
 Route::post('revenues', [RevenueController::class, 'store']);
+Route::get('revenues/{id}/edit', [RevenueController::class, 'edit']);
+Route::put('revenues/{id}/edit', [RevenueController::class, 'update']);
