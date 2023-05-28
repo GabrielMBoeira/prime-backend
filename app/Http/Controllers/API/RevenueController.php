@@ -118,4 +118,23 @@ class RevenueController extends Controller
         }
     }
 
+    public function destroy($id)
+    {
+        $revenue = Revenue::find($id);
+
+        if ($revenue) {
+
+            $revenue->delete();
+            return response()->json([
+                'status' => 200,
+                'message' => 'Revenue Deleted Successfully',
+            ]);
+        } else {
+
+            return response()->json([
+                'status' => 404,
+                'message' => 'No Revenue ID Found',
+            ]);
+        }
+    }
 }
