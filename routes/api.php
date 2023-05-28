@@ -14,4 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('revenue', [RevenueController::class, 'index']);
+Route::get('revenues', [RevenueController::class, 'index']);
+Route::post('revenues', [RevenueController::class, 'store']);

@@ -10,4 +10,11 @@ class Revenue extends Model
     use HasFactory;
 
     protected $table = 'revenues';
+
+    protected $fillable = [
+        'description',
+        'revenue',
+        'dateIni',
+    ];
+
 }
